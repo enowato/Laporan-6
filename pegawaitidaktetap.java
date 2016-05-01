@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tugasprktkm6;
+
+/**
+ *
+ * @author Lenovo
+ */
+public class pegawaitidaktetap extends employee {
+    private int lembur;
+    private long total;
+    public void lembur(int a){
+        if (a>10){
+            int j=a-10;
+            lembur=j*10000;
+            total=gaji+lembur;
+        }
+        else{
+            total=gaji;
+        }
+    }
+    public void display(){
+        System.out.println("total gaji: "+total);
+    }
+}
