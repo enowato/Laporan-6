@@ -30,14 +30,22 @@ public class pegawaitetap extends employee{
         tunjanganistri=gajittl*10/100;
         gajittl=gajittl+tunjanganistri;
     }
-    public void tunjangananak(){
+    public void tunjangananak(int a){
         tunjangananak=gajittl*15/100;
+        if(a<4){
+            tunjangananak=tunjangananak*a;
+        }
+        else{
+            tunjangananak=tunjangananak*3;
+        }
         gajittl=gajittl+tunjangananak;
     }
     public void display(){
         System.out.println("gaji anda sebesar: "+gajittl);
-        System.out.println("bonus lama kerja: "+lamakrj+" tunjangan tambahan: "+tunjangan);
-        System.out.println("tunjangan istri sebesar: "+tunjanganistri);
-        System.out.println("tunjangan anak sebesar: "+tunjangananak);
+        System.out.println("detail:");
+        System.out.println("\t-gaji pokok: "+gaji);
+        System.out.println("\t-bonus lama kerja: "+lamakrj+"\n\t-tunjangan tambahan: "+tunjangan);
+        System.out.println("\t-tunjangan istri sebesar: "+tunjanganistri);
+        System.out.println("\t-tunjangan anak sebesar: "+tunjangananak);
     }
 }

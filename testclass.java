@@ -40,9 +40,12 @@ public class testclass {
                     System.out.print("apakah punya anak(y/n): ");
                     String anak=masuk.next();
                     if(anak.equalsIgnoreCase("y")){
-                        m[n1].tunjangananak();
+                        System.out.print("banyak anak: ");
+                        int u=masuk.nextInt();
+                        m[n1].tunjangananak(u);
                     }
                     m[n1].tunjanganmanajer();
+                    System.out.println("----------------------------------------------");
                     m[n1].display();
                     n1++;break;
                 case 2: p[n2]=new pegawaitetap();
@@ -57,18 +60,23 @@ public class testclass {
                     System.out.print("apakah punya anak(y/n): ");
                     String anak2=masuk.next();
                     if(anak2.equalsIgnoreCase("y")){
-                        p[n2].tunjangananak();
+                        System.out.print("banyak anak: ");
+                        int u=masuk.nextInt();
+                        p[n2].tunjangananak(u);
                     }
+                    System.out.println("----------------------------------------------");
                     p[n2].display();
                     n2++;break;
                 case 3: pgt[n3]=new pegawaitidaktetap();
                     System.out.print("masukan banyak jamkerja: ");
                     int g=masuk.nextInt();
                     pgt[n3].lembur(g);
+                    System.out.println("----------------------------------------------");
                     pgt[n3].display();
             }
-            System.out.println("apakah ingin memasukan data lagi?(y/n) ");
+            System.out.print("apakah ingin memasukan data lagi?(y/n) ");
             jwb=masuk.next();
+            System.out.println("==============================================");
         }while(jwb.equalsIgnoreCase("y")) ;
     }
 }
